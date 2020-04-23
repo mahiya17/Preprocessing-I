@@ -1,3 +1,10 @@
+// variables
+@heroSection-color: rgb(245, 243, 243);
+@primaryColor: darkgray;
+@bodyTxt: 'Roboto', sans-serif;
+@headerTxt: 'Roboto Slab', serif;
+
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -72,6 +79,7 @@ html, body {
 			font-size: 1.4rem;
 			color: black;
 			font-weight: 600;
+			font-family: @headerTxt;
 		}
 	}
 	.copyright {
@@ -81,10 +89,11 @@ html, body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: darkgray;
+		background-color: @primaryColor;
 		p {
 			font-size: 20px;
 			color: white;
+			font-family: @headerTxt;
 		}
 	}
 	.end-section {
@@ -96,6 +105,7 @@ html, body {
 		h3 {
 			font-size: 24px;
 			font-weight: 600;
+			font-family: @headerTxt;
 		}
 		.columns {
 			width: 100%;
@@ -118,6 +128,7 @@ html, body {
 					border-bottom: 1px solid lightgray;
 					padding-top: 20px;
 					padding-left: 10px;
+					font-family: @bodyTxt;
 					&:first-child{
 						font-weight: 900;
 					}
@@ -134,6 +145,7 @@ html, body {
 						border-bottom: 1px solid lightgray;
 						padding-top: 20px;
 						padding-left: 10px;
+						font-family: @bodyTxt;
 						&:first-child{
 							font-weight: 900;
 						}
@@ -150,6 +162,7 @@ html, body {
 						border-bottom: 1px solid lightgray;
 						padding-top: 20px;
 						padding-left: 10px;
+						font-family: @bodyTxt;
 						&:first-child{
 							font-weight: 900;
 						}
@@ -176,12 +189,14 @@ html, body {
 			h2 {
 				font-size: 35px;
 				font-weight: 600;
+				font-family: @headerTxt;
 			}
 			p {
 				margin: 25px 0px;
 				font-size: 16px;
 				line-height: 25px;
 				width: 100%;
+				font-family: @bodyTxt;
 			}		
 		}
 		.right-chunk {
@@ -193,15 +208,17 @@ html, body {
 				font-size: 24px;
 				font-weight: 600;
 				margin-bottom: 25px;
+				font-family: @headerTxt;
 			}
 			span {
 				border: 1px solid lightgray;
-				font-size: 20px;
-				padding-top: 10px;
-				padding-bottom: 10px;
-				padding-right: 10px;
+				font-size: 18px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-right: 15px;
 				padding-left: 30px;
-				border-radius: 3px;
+				border-radius: 5px;
+				font-family: @bodyTxt;
 			}
 		}
 
@@ -211,7 +228,7 @@ html, body {
 		height: 660px;
 		margin: 0 auto;
 		// border: 5px solid magenta;
-		background-color: rgb(245, 243, 243);
+		background-color: @heroSection-color;
 		border-radius: 10px;
 		padding: 0 3%;
 		padding-top: 5%;
@@ -219,9 +236,11 @@ html, body {
 			font-size: 40px;
 			font-weight: 550;
 			padding: 3% 0;
+			font-family: @headerTxt;
 		}
 		span {
 			font-size: 30px;
+			font-family: @bodyTxt;
 		}
 		div.lightgray-line {
 				width: 100%;
@@ -232,15 +251,19 @@ html, body {
 			font-size: 18px;
 			font-weight: medium;
 			line-height: 25px;
+			font-family: @bodyTxt;
+			padding-right: 20px;
 		}
 		button {
 			padding: 10px;
 			margin-top: 15px;
-			font-size: 16px;
-			font-weight: bold;
-			background-color: darkgray;
+			font-size: 20px;
+			font-weight: medium;
+			background-color: @primaryColor;
 			color: white;
-			border-radius: 7px;
+			border-radius: 10px;
+			width: 30%;
+			font-family: @headerTxt;
 		}
 		.hero-img {
 			width: 35%;
