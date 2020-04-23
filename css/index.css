@@ -1,1 +1,318 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+.container .main-nav {
+  padding: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+.container .main-nav a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: black;
+  font-weight: 600;
+}
+.container .copyright {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkgray;
+}
+.container .copyright p {
+  font-size: 20px;
+  color: white;
+}
+.container .end-section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 3%;
+  height: 250px;
+}
+.container .end-section h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.container .end-section .columns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.container .end-section .columns .rows {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.container .end-section .columns .rows .row {
+  width: 35%;
+  margin-top: 25px;
+}
+.container .end-section .columns .rows .row p {
+  font-size: 20px;
+  color: black;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.container .end-section .columns .rows .row p:first-child {
+  font-weight: 900;
+}
+.container .end-section .columns .rows .row2 {
+  width: 20%;
+  margin-top: 25px;
+}
+.container .end-section .columns .rows .row2 p {
+  font-size: 20px;
+  color: black;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.container .end-section .columns .rows .row2 p:first-child {
+  font-weight: 900;
+}
+.container .end-section .columns .rows .row1 {
+  width: 10%;
+  margin-top: 25px;
+}
+.container .end-section .columns .rows .row1 p {
+  font-size: 20px;
+  color: black;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.container .end-section .columns .rows .row1 p:first-child {
+  font-weight: 900;
+}
+.container .middle-section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 3% 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .middle-section .left-chunk {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 45%;
+}
+.container .middle-section .left-chunk h2 {
+  font-size: 35px;
+  font-weight: 600;
+}
+.container .middle-section .left-chunk p {
+  margin: 25px 0px;
+  font-size: 16px;
+  line-height: 25px;
+  width: 100%;
+}
+.container .middle-section .right-chunk {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.container .middle-section .right-chunk h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.container .middle-section .right-chunk span {
+  border: 1px solid lightgray;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 30px;
+  border-radius: 3px;
+}
+.container .hero-section {
+  width: 90%;
+  height: 660px;
+  margin: 0 auto;
+  background-color: #f5f3f3;
+  border-radius: 10px;
+  padding: 0 3%;
+  padding-top: 5%;
+}
+.container .hero-section h1 {
+  font-size: 40px;
+  font-weight: 550;
+  padding: 3% 0;
+}
+.container .hero-section span {
+  font-size: 30px;
+}
+.container .hero-section div.lightgray-line {
+  width: 100%;
+  margin: 20px auto;
+  border: 1px solid #b9b2b2;
+}
+.container .hero-section p {
+  font-size: 18px;
+  font-weight: medium;
+  line-height: 25px;
+}
+.container .hero-section button {
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: darkgray;
+  color: white;
+  border-radius: 7px;
+}
+.container .hero-section .hero-img {
+  width: 35%;
+}
+.container .hero-section .hero-img img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
