@@ -5,6 +5,34 @@
 @headerTxt: 'Roboto Slab', serif;
 
 
+// mixins
+
+.flexSettings-middleSec {
+	display: flex;
+	flex-direction: column;
+}
+// P's inside rows 
+.row-P {
+	font-size: 20px;
+	color: black;
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+	padding-top: 20px;
+	padding-left: 10px;
+	font-family: @bodyTxt;
+	&:first-child{
+		font-weight: 900;
+	}
+}
+// H3's
+.h3 {
+	font-size: 24px;
+	font-weight: 600;
+	font-family: @headerTxt;
+}
+
+
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -80,8 +108,15 @@ html, body {
 			color: black;
 			font-weight: 600;
 			font-family: @headerTxt;
-		}
-	}
+			@media (max-width: 500px) {
+				font-size: 1rem;
+				padding: 5px;
+			} // @media in a
+		} // closes a
+		@media (max-width: 500px) {
+			width: 500px;
+		} // @media in main-nav
+	} // main-nav
 	.copyright {
 		width: 100%;
 		height: 70px;
@@ -95,7 +130,10 @@ html, body {
 			color: white;
 			font-family: @headerTxt;
 		}
-	}
+		@media (max-width: 500px) {
+		width: 500px;
+		} // @media in copyright
+	} // copyright
 	.end-section {
 		width: 90%;
 		margin: 0 auto;
@@ -103,9 +141,7 @@ html, body {
 		// border: 2px solid orange;
 		height: 250px;
 		h3 {
-			font-size: 24px;
-			font-weight: 600;
-			font-family: @headerTxt;
+			.h3();
 		}
 		.columns {
 			width: 100%;
@@ -118,37 +154,19 @@ html, body {
 				flex-direction: row;
 				justify-content: flex-start;
 				.row {
-				width: 35%;
-				margin-top: 25px;
-				// border: 1px solid green;
-				p {
-					font-size: 20px;
-					color: black;
-					border-top: 1px solid lightgray;
-					border-bottom: 1px solid lightgray;
-					padding-top: 20px;
-					padding-left: 10px;
-					font-family: @bodyTxt;
-					&:first-child{
-						font-weight: 900;
+					width: 35%;
+					margin-top: 25px;
+					// border: 1px solid green;
+					p {
+						.row-P();
 					}
-					}
-				}
+				}	
 				.row2 {
 					width: 20%;
 					margin-top: 25px;
 					// border: 3px solid;
 					p {
-						font-size: 20px;
-						color: black;
-						border-top: 1px solid lightgray;
-						border-bottom: 1px solid lightgray;
-						padding-top: 20px;
-						padding-left: 10px;
-						font-family: @bodyTxt;
-						&:first-child{
-							font-weight: 900;
-						}
+						.row-P();
 					}
 				}
 				.row1 {
@@ -156,22 +174,16 @@ html, body {
 					margin-top: 25px;
 					// border: 3px solid;
 					p {
-						font-size: 20px;
-						color: black;
-						border-top: 1px solid lightgray;
-						border-bottom: 1px solid lightgray;
-						padding-top: 20px;
-						padding-left: 10px;
-						font-family: @bodyTxt;
-						&:first-child{
-							font-weight: 900;
-						}
+						.row-P();
 					}
-				}
-				
-			}
+				} // closes row1
+			} // closes rows
+		} // closes columns
+		@media (max-width: 500px) {
+			width: 375px;
+			margin: 0 auto;
 		}
-	}
+	} // closes end section
 	.middle-section {
 		width: 90%;
 		margin: 0 auto;
@@ -181,8 +193,7 @@ html, body {
 		flex-direction: row;
 		justify-content: space-between;
 		.left-chunk {
-			display: flex;
-			flex-direction: column;
+			.flexSettings-middleSec();
 			justify-content: flex-start;
 			width: 45%;
 			// border: 2px solid orchid;
@@ -197,18 +208,15 @@ html, body {
 				line-height: 25px;
 				width: 100%;
 				font-family: @bodyTxt;
-			}		
-		}
+			} // closes P		
+		} // closes left chunk
 		.right-chunk {
 			width: 50%;
 			// border: 5px solid mediumaquamarine;
-			display: flex;
-			flex-direction: column;
+			.flexSettings-middleSec();
 			h3 {
-				font-size: 24px;
-				font-weight: 600;
+				.h3();
 				margin-bottom: 25px;
-				font-family: @headerTxt;
 			}
 			span {
 				border: 1px solid lightgray;
@@ -219,10 +227,13 @@ html, body {
 				padding-left: 30px;
 				border-radius: 5px;
 				font-family: @bodyTxt;
-			}
-		}
-
-	}
+			} // closes span
+		} // closes right chunk
+		@media (max-width: 500px) {
+			width: 375px;
+			margin: 0 auto;
+		} // inside middle section
+	} // closes middle section
 	.hero-section {
 		width: 90%;
 		height: 660px;
@@ -272,7 +283,18 @@ html, body {
 				max-width: 100%;
 				max-height: 100%;
 				display: block;
-			}
-		}
-	}
-}
+			} // closes img
+		} // closes hero img
+	
+		@media (max-width: 500px) {
+			width: 375px;
+			margin: 0 auto;
+		} // inside hero section
+	} // closes hero section
+
+	@media ( max-width: 500px ) {
+		width: 500px;
+		// border: 3px solid black;
+		margin: 0 auto;
+	} // closes @media inside Container
+} // closes Container
